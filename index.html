@@ -1,105 +1,536 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Voice of Justice Nigeria</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-<h1>VOICE OF JUSTICE NIGERIA</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="cases.html">Case Files</a>
-<a href="petition.html">Petition</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-
-<section class="hero">
-<h2>A Voice for the Voiceless</h2>
-<p>Standing for Justice, Truth and Accountability in Nigeria</p>
-<button onclick="location.href='karowi-bala.html'">
-Read Karowi Bala Case
-</button>
-</section>
-
-<section class="section">
-<h2>Featured Case</h2>
-<p>
-Balamene Jona Binis (Karowi Bala), father of 9,
-has been missing since July 11, 2024 after being
-taken from his residence under controversial circumstances.
-</p>
-</section>
-
-<section class="section">
-<h2>Our Mission</h2>
-<p>
-We document injustice, amplify victims’ voices,
-and demand accountability from institutions.
-</p>
-</section>
-
-<div class="footer">
-© 2026 Voice of Justice Nigeria — All Rights Reserved
-</div>
-
-</body>
-</html>      color: #0077cc;
-    }
-    .socials a {
-      margin-right: 10px;
-      font-weight: bold;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!--Intro Section-->
-    <section class="intro">
-      <h1>Cchristian D</h1>
-      <p>Social Activist | Auto Dealer | Entrepreneur</p>
-    </section>
-
-    <!--About Section-->
-    <section class="section">
-      <h2>About</h2>
-      <p>
-        <strong>Cchristian(D),</strong> who also known as <strong>Prince Emmanuel Abisoye</strong> is a Nigerian social activist, Auto Dealer, and entrepreneur. Known for his bold stance on social justice and community empowerment, he has gained significant recognition for using his platform to raise awareness about pressing societal issues.
-      </p>
-    </section>
-    <!--Career Highlights-->
-    <section class="section">
-      <h2>Career</h2>
-      <ul>
-        <li><strong>Social Activism:</strong> Advocate for justice and equality, constitently using his voice to address corruption and societal challenges.</li>
-        <li><strong>Auto Dealer:</strong> Founder of <a href="https://sabicars.com" target="_blank">SABICARS.COM</a></li> and GET AUTOS, specializing in Toyota Hiace buses.</li>
-        <li><strong>Entrepreneurship:</strong> Owner of GET PHARMACIES, contributing to healthcare accessibility in his community.</li>
-      </ul>
-    </section>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MO Logistics - Fast & Reliable Shipping from Nigeria to Germany and Europe. CAC Registered. Doorstep delivery and customs processing.">
     
-    <!--Social Links-->
-    <section class="section socials">
-      <h2>Social Handle</h2>
-      <a href="https://tiktok.com/@cchritian_d" target="_blank">Tiktok</a>
-      <a href="https://instagram.com/@cchrist.d" target="_blank">Instagram</a>
-      <a href="mailto:Cchristian@gmail.com">Email</a>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>MO Logistics | Ship Nigeria to Germany & Europe</title>
+</head>
+<body>
+    
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#home">
+                        <img src="images/mo-logistics-logo.png" alt="MO Logistics Logo">
+                        <span>MO Logistics</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#schedule" class="nav-link">Shipping Schedule</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="https://wa.me/2349160009722" class="btn btn-wa" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>CAC Registered 2026 • 5+ Years Operational Experience</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Ship from <span class="highlight">Nigeria</span> to 
+                        <span class="highlight">Germany</span> & Europe
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Fast, secure, and dependable logistics services. Your packages arrive on time, every time. 
+                        We handle customs, doorstep delivery, and everything in between.
+                    </p>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-box"></i>
+                            <span>Cargo Handling</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Global Shipping</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-truck-fast"></i>
+                            <span>Express Delivery</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-file-invoice"></i>
+                            <span>Customs Processing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get a Quote</a>
+                        <a href="#schedule" class="btn btn-outline">View Shipping Dates</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">5,980+</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Trusted</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <div class="card-header">
+                            <i class="fas fa-plane"></i>
+                            <span>Next Batch Departure</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="route">
+                                <div class="from">
+                                    <span class="country">🇳🇬 Nigeria</span>
+                                    <span class="date">23rd April 2026</span>
+                                </div>
+                                <div class="arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                                <div class="to">
+                                    <span class="country">🇩🇪 Germany</span>
+                                    <span class="date">Arrives 3-5 days</span>
+                                </div>
+                            </div>
+                            <div class="route-divider">via DHL Express to rest of Europe</div>
+                            <a href="#contact" class="btn btn-card">Book Your Slot</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!--footer-->
-    <div class="footer">
-      © 2025 Cchristian D. All Rights Reserved.
-    </div>
-  </div>
+    <!-- ==================== SHIPPING ITEMS SECTION ==================== -->
+    <section class="shipping-items">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Ship</h2>
+                <p>From documents to foodstuffs, we handle it all with care</p>
+            </div>
+            
+            <div class="items-grid">
+                <div class="item-card">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Documents</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-bag-shopping"></i>
+                    <span>Bags</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-shoe-prints"></i>
+                    <span>Shoes</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Cosmetics</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-gem"></i>
+                    <span>Jewelries</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-leaf"></i>
+                    <span>Dry Herbs</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-scissors"></i>
+                    <span>Hair Extensions</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-shirt"></i>
+                    <span>Clothes</span>
+                </div>
+                <div class="item-card">
+                    <i class="fas fa-utensils"></i>
+                    <span>Food Stuffs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Help You</h2>
+                <p>End-to-end logistics solutions for individuals and businesses</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Cargo Handling</h3>
+                    <p>Professional loading, unloading, and warehousing of your goods in Lagos and Germany.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>International Shipping</h3>
+                    <p>Air and sea freight options from Nigeria to Germany, then DHL to anywhere in Europe.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Doorstep Delivery</h3>
+                    <p>We pick up from your location in Nigeria and deliver to the recipient's door in Europe.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Customs Processing</h3>
+                    <p>We handle all documentation and customs clearance so you don't have to worry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCHEDULE SECTION ==================== -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2>April 2026 Shipping Schedule</h2>
+                <p>Drop off your package before these dates</p>
+            </div>
+            
+            <div class="schedule-grid">
+                <div class="schedule-card featured">
+                    <div class="schedule-badge">Next Departure</div>
+                    <div class="route-display">
+                        <span class="from">🇩🇪 Germany</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <span class="to">🇳🇬 Nigeria</span>
+                    </div>
+                    <div class="schedule-date">17th April 2026</div>
+                    <div class="schedule-note">Drop off by: 15th April</div>
+                </div>
+                
+                <div class="schedule-card">
+                    <div class="route-display">
+                        <span class="from">🇳🇬 Nigeria</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <span class="to">🇩🇪 Germany</span>
+                    </div>
+                    <div class="schedule-date">23rd April 2026</div>
+                    <div class="schedule-note">Drop off by: 21st April</div>
+                </div>
+            </div>
+            
+            <div class="upcoming-dates">
+                <h3>Upcoming Drop-off Dates (Nigeria → Germany)</h3>
+                <div class="dates-list">
+                    <span class="date-badge">23rd Apr</span>
+                    <span class="date-badge">24th Apr</span>
+                    <span class="date-badge">25th Apr</span>
+                    <span class="date-badge">26th Apr</span>
+                    <span class="date-badge">27th Apr</span>
+                    <span class="date-badge">28th Apr</span>
+                    <span class="date-badge">29th Apr</span>
+                    <span class="date-badge">30th Apr</span>
+                </div>
+            </div>
+            
+            <div class="important-note">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p><strong>Important:</strong> WhatsApp Number & Name of Package Owner MUST be written on each parcel. Packages without this information will not be processed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple, transparent, and reliable process</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Book a Slot</h3>
+                    <p>Contact us on WhatsApp to reserve your space in the next batch.</p>
+                </div>
+                
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Pack & Label</h3>
+                    <p>Pack your items securely. Write your WhatsApp number and name clearly on the package.</p>
+                </div>
+                
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <h3>Drop Off</h3>
+                    <p>Bring your package to our Lagos office or request pickup (within Lagos).</p>
+                </div>
+                
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3>Receive</h3>
+                    <p>We deliver to your recipient in Germany or forward via DHL across Europe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p class="contact-subtitle">We're available on WhatsApp and at our Lagos office</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>WhatsApp (Nigeria)</h4>
+                                <a href="https://wa.me/2349160009722">+234 916 000 9722</a>
+                                <a href="https://wa.me/2348034010782">+234 803 401 0782</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>WhatsApp (Germany)</h4>
+                                <a href="https://wa.me/4915214982798">+49 152 149 82798</a>
+                                <a href="https://wa.me/4915215600770">+49 152 156 00770</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Office Address</h4>
+                                <p>42 Kakawa Street, CMS Book Shop, Lagos Island, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="method-details">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-card">
+                        <h3>Request a Quote</h3>
+                        <p>Tell us what you need to ship, and we'll get back to you within 1 hour.</p>
+                        
+                        <form id="quoteForm" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp Number</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="+234 XXX XXX XXXX" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item">What are you shipping?</label>
+                                <input type="text" id="item" name="item" placeholder="e.g., 2 boxes of clothes, documents" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="weight">Estimated Weight (kg)</label>
+                                    <input type="number" id="weight" name="weight" placeholder="10">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="destination">Destination</label>
+                                    <select id="destination" name="destination">
+                                        <option value="germany">Germany</option>
+                                        <option value="other-eu">Other EU (via DHL)</option>
+                                        <option value="nigeria">Nigeria</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MAP SECTION ==================== -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.723456789012!2d3.3894567!3d6.4567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf2c6a1234567%3A0xabcdef1234567890!2s42%20Kakawa%20St%2C%20Lagos%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1744963200000!5m2!1sen!2sng" 
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/mo-logistics-logo.png" alt="MO Logistics">
+                        <span>MO Logistics</span>
+                    </div>
+                    <p>Registered and verified logistics company. Ship from Nigeria to Germany. Your packages are safe with us.</p>
+                    <div class="trust-badge-footer">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Trusted • CAC Registered 2026</span>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#schedule">Shipping Schedule</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Cargo Handling</li>
+                        <li>International Shipping</li>
+                        <li>Doorstep Delivery</li>
+                        <li>Customs Processing</li>
+                        <li>Express Delivery</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +234 916 000 9722</li>
+                        <li><i class="fas fa-phone"></i> +49 152 149 82798</li>
+                        <li><i class="fas fa-map-pin"></i> 42 Kakawa Street, Lagos Island</li>
+                        <li><i class="fas fa-envelope"></i> info@mologisticsinternational.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 MO Logistics International. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <a href="https://wa.me/2349160009722" class="floating-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us!</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
-    
