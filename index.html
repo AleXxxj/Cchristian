@@ -36,6 +36,7 @@
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#schedule" class="nav-link">Shipping Schedule</a></li>
+                    <li><a href="#proof" class="nav-link">Deliveries</a></li>
                     <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -57,6 +58,7 @@
 
     <!-- ==================== HERO SECTION ==================== -->
     <section class="hero" id="home">
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
@@ -124,14 +126,14 @@
                         <div class="card-body">
                             <div class="route">
                                 <div class="from">
-                                    <span class="country">🇳🇬 Nigeria</span>
+                                    <span class="flag-big">🇳🇬</span>
                                     <span class="date">23rd April 2026</span>
                                 </div>
-                                <div class="arrow">
-                                    <i class="fas fa-arrow-right"></i>
+                                <div class="arrow-plane">
+                                    <i class="fas fa-plane"></i>
                                 </div>
                                 <div class="to">
-                                    <span class="country">🇩🇪 Germany</span>
+                                    <span class="flag-big">🇩🇪</span>
                                     <span class="date">Arrives 3-5 days</span>
                                 </div>
                             </div>
@@ -140,6 +142,51 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TRUST STRIPS ==================== -->
+    <section class="trust-strips">
+        <div class="container">
+            <div class="strips-grid">
+                <div class="strip-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Secure</span>
+                </div>
+                <div class="strip-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Fast Delivery</span>
+                </div>
+                <div class="strip-item">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Support</span>
+                </div>
+                <div class="strip-item">
+                    <i class="fas fa-star"></i>
+                    <span>5-Star Service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LIVE TICKER ==================== -->
+    <section class="ticker-section">
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker-item">✅ Package from Lagos delivered to Berlin — 2 days ago</div>
+                <div class="ticker-item">✅ Documents arrived Hamburg from Abuja — 1 day ago</div>
+                <div class="ticker-item">✅ 3 boxes shipped Lagos → Munich — Today</div>
+                <div class="ticker-item">✅ Hair extensions delivered to Cologne — 3 days ago</div>
+                <div class="ticker-item">✅ Food stuffs arrived Frankfurt — Yesterday</div>
+                <div class="ticker-item">✅ Shoes delivered to Stuttgart from Lagos — 2 days ago</div>
+                <div class="ticker-item">✅ Cosmetics arrived Düsseldorf — Today</div>
+                <div class="ticker-item">✅ Bags shipped Lagos → Dortmund — 4 days ago</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="ticker-item">✅ Package from Lagos delivered to Berlin — 2 days ago</div>
+                <div class="ticker-item">✅ Documents arrived Hamburg from Abuja — 1 day ago</div>
+                <div class="ticker-item">✅ 3 boxes shipped Lagos → Munich — Today</div>
+                <div class="ticker-item">✅ Hair extensions delivered to Cologne — 3 days ago</div>
             </div>
         </div>
     </section>
@@ -285,6 +332,42 @@
             <div class="important-note">
                 <i class="fas fa-exclamation-triangle"></i>
                 <p><strong>Important:</strong> WhatsApp Number & Name of Package Owner MUST be written on each parcel. Packages without this information will not be processed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROOF SECTION ==================== -->
+    <section class="proof-section" id="proof">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Deliveries</h2>
+                <p>Real packages. Real deliveries. Real people.</p>
+            </div>
+            
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-image">
+                        <img src="images/delivery-1.jpg" alt="Package delivered to Berlin" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'proof-placeholder\'><i class=\'fas fa-box-open\'></i><span>Lagos → Berlin</span></div>';">
+                    </div>
+                    <div class="proof-badge">🇳🇬 Lagos → 🇩🇪 Berlin</div>
+                    <p>✅ Delivered in 4 days</p>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="proof-image">
+                        <img src="images/delivery-2.jpg" alt="Package delivered to Munich" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'proof-placeholder\'><i class=\'fas fa-box-open\'></i><span>Abuja → Munich</span></div>';">
+                    </div>
+                    <div class="proof-badge">🇳🇬 Abuja → 🇩🇪 Munich</div>
+                    <p>✅ Delivered in 3 days</p>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="proof-image">
+                        <img src="images/delivery-3.jpg" alt="Package delivered to Hamburg" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'proof-placeholder\'><i class=\'fas fa-box-open\'></i><span>Lagos → Hamburg</span></div>';">
+                    </div>
+                    <div class="proof-badge">🇳🇬 Lagos → 🇩🇪 Hamburg</div>
+                    <p>✅ Delivered in 5 days</p>
+                </div>
             </div>
         </div>
     </section>
@@ -486,6 +569,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#schedule">Shipping Schedule</a></li>
+                        <li><a href="#proof">Recent Deliveries</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -524,7 +608,14 @@
         </div>
     </footer>
 
-    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <!-- ==================== FLOATING WHATSAPP BUTTONS ==================== -->
+    <!-- Voice Message Button -->
+    <a href="https://wa.me/2349160009722?text=Hello%20MO%20Logistics%2C%20I%20need%20help%20with%20shipping" class="floating-wa-voice" target="_blank" title="Tap to send voice message">
+        <i class="fas fa-microphone"></i>
+        <span class="tooltip">Send voice message!</span>
+    </a>
+    
+    <!-- Text Chat Button -->
     <a href="https://wa.me/2349160009722" class="floating-wa" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span class="tooltip">Chat with us!</span>
