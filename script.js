@@ -69,11 +69,7 @@ quoteForm.addEventListener('submit', (e) => {
                    `Please provide a shipping quote. Thank you!`;
     
     // Open WhatsApp with message
-    // Using the main Nigeria number
     window.open(`https://wa.me/2349160009722?text=${message}`, '_blank');
-    
-    // Optional: Reset form
-    // quoteForm.reset();
 });
 
 // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
@@ -120,28 +116,219 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Apply animation to elements
-document.querySelectorAll('.service-card, .item-card, .schedule-card, .step').forEach(el => {
+document.querySelectorAll('.service-card, .item-card, .schedule-card, .step, .proof-card, .team-card, .gallery-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// ==================== DATE UPDATE FUNCTION (EASY MAINTENANCE) ====================
-// This is where you'll update the shipping dates monthly
-// Simply change these values and the site updates automatically
+// ==================== TYPEWRITER EFFECT ====================
+const heroTitle = document.querySelector('.hero-title');
+const originalText = heroTitle.innerHTML;
 
-const shippingDates = {
-    germanyToNigeria: '17th April 2026',
-    nigeriaToGermany: '23rd April 2026',
-    upcomingDates: ['23rd Apr', '24th Apr', '25th Apr', '26th Apr', '27th Apr', '28th Apr', '29th Apr', '30th Apr']
-};
-
-// Function to update dates if needed
-function updateShippingDates() {
-    // This function can be used if you want to pull dates from a Google Sheet
-    // For now, the dates are hardcoded in HTML for simplicity
-    console.log('Shipping dates loaded for April 2026');
+function typeWriter() {
+    heroTitle.style.opacity = '1';
+    
+    // Store the HTML structure but type out the text
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = originalText;
+    const textContent = tempDiv.textContent || tempDiv.innerText || '';
+    
+    heroTitle.textContent = '';
+    
+    let i = 0;
+    const speed = 50;
+    
+    function type() {
+        if (i < textContent.length) {
+            heroTitle.textContent += textContent.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        } else {
+            // Restore HTML with spans for highlights
+            heroTitle.innerHTML = originalText;
+            heroTitle.style.borderRight = 'none';
+        }
+    }
+    
+    type();
 }
 
-updateShippingDates();
+// Run typewriter on page load
+window.addEventListener('load', () => {
+    setTimeout(typeWriter, 800);
+});
+
+// ==================== COUNTER ANIMATION ====================
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const targetText = counter.getAttribute('data-target');
+                const target = parseInt(targetText);
+                const suffix = targetText === '100' ? '%' : (targetText === '2' ? '' : '+');
+                const duration = 2000;
+                const startTime = Date.now();
+                
+                function updateCounter() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // Ease out cubic
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(eased * target);
+                    
+                    if (suffix === '%') {
+                        counter.textContent = current + suffix + ' Trusted';
+                    } else if (suffix === '') {
+                        counter.textContent = current;
+                    } else {
+                        counter.textContent = current.toLocaleString() + suffix;
+                    }
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        // Final value
+                        if (suffix === '%') {
+                            counter.textContent = target + suffix + ' Trusted';
+                        } else if (suffix === '') {
+                            counter.textContent = target;
+                        } else {
+                            counter.textContent = target.toLocaleString() + suffix;
+                        }
+                    }
+                }
+                
+                updateCounter();
+            });
+            
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) {
+    statsObserver.observe(heroStats);
+}
+
+// ==================== PARALLAX EFFECT ====================
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero && window.innerWidth > 768) {
+        hero.style.backgroundPositionY = -(scrolled * 0.4) + 'px';
+    }
+});
+
+// ==================== CURSOR GLOW EFFECT ====================
+const cursorGlow = document.createElement('div');
+cursorGlow.className = 'cursor-glow';
+document.body.appendChild(cursorGlow);
+
+document.addEventListener('mousemove', (e) => {
+    cursorGlow.style.left = e.clientX + 'px';
+    cursorGlow.style.top = e.clientY + 'px';
+    cursorGlow.style.opacity = '1';
+});
+
+document.addEventListener('mouseleave', () => {
+    cursorGlow.style.opacity = '0';
+});
+
+// ==================== PARTICLES INITIALIZATION ====================
+if (typeof particlesJS !== 'undefined') {
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 40,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.3,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 0.5,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "size_min": 1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.15,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 1.5,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 0.4
+                    }
+                },
+                "push": {
+                    "particles_nb": 3
+                }
+            }
+        },
+        "retina_detect": true
+    });
+}
+
+// ==================== CLOSE MOBILE MENU WHEN CLICKING OUTSIDE ====================
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+
+console.log('🚀 MO Logistics website loaded successfully!');
+console.log('🌍 Visit: www.mologisticsinternational.com');
