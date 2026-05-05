@@ -149,6 +149,11 @@ a {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
+    gap: 40px;
+}
+
+.logo {
+    flex-shrink: 0;
 }
 
 .logo a {
@@ -168,7 +173,9 @@ a {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 28px;
+    margin-left: auto;
+    margin-right: 24px;
 }
 
 .nav-link {
@@ -197,6 +204,8 @@ a {
 .nav-actions .btn {
     padding: 10px 20px;
     font-size: 0.95rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .hamburger {
