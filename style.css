@@ -168,7 +168,7 @@ a {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 30px;
 }
 
 .nav-link {
