@@ -157,7 +157,7 @@ function typeWriter() {
 
 // Run typewriter on page load
 window.addEventListener('load', () => {
-    setTimeout(typeWriter, 800);
+    setTimeout(typeWriter, 500);
 });
 
 // ==================== COUNTER ANIMATION ====================
