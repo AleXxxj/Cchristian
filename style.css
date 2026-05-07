@@ -297,6 +297,8 @@ a {
     margin-bottom: 20px;
     min-height: 1.3em;
     animation: none;
+    word-break: keep-all;
+    overflow-wrap: normal;
 }
 
 .hero-title .reveal-letter {
@@ -304,6 +306,7 @@ a {
     opacity: 0;
     filter: blur(4px);
     animation: revealGlow 0.5s ease forwards;
+    white-space: pre;
 }
 
 @keyframes revealGlow {
@@ -384,7 +387,8 @@ a {
     font-size: 2rem;
     font-weight: 800;
     color: var(--secondary);
-    min-width: 80px;
+    min-width: 130px;
+    text-align: center;
 }
 
 .stat-label {
