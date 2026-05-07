@@ -297,16 +297,16 @@ a {
     margin-bottom: 20px;
     min-height: 1.3em;
     animation: none;
-    word-break: keep-all;
-    overflow-wrap: normal;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-title .reveal-letter {
-    display: inline-block;
+    display: inline;
     opacity: 0;
     filter: blur(4px);
     animation: revealGlow 0.5s ease forwards;
-    white-space: pre;
 }
 
 @keyframes revealGlow {
