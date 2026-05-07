@@ -138,7 +138,7 @@ function typeWriter() {
     heroTitle.textContent = '';
     
     let i = 0;
-    const speed = 50;
+    const speed = 75;
     
     function type() {
         if (i < textContent.length) {
