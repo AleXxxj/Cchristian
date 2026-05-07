@@ -123,42 +123,43 @@ document.querySelectorAll('.service-card, .item-card, .schedule-card, .step, .pr
     observer.observe(el);
 });
 
-// ==================== TYPEWRITER EFFECT ====================
+// ==================== GLOW REVEAL TEXT EFFECT ====================
 const heroTitle = document.querySelector('.hero-title');
-const originalText = heroTitle.innerHTML;
 
-function typeWriter() {
-    heroTitle.style.opacity = '1';
+function glowReveal() {
+    const originalHTML = heroTitle.innerHTML;
     
-    // Store the HTML structure but type out the text
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = originalText;
-    const textContent = tempDiv.textContent || tempDiv.innerText || '';
+    // Get plain text
+    const temp = document.createElement('div');
+    temp.innerHTML = originalHTML;
+    const text = temp.textContent || '';
     
-    heroTitle.textContent = '';
-    
-    let i = 0;
-    const speed = 700;
-    
-    function type() {
-        if (i < textContent.length) {
-            heroTitle.textContent += textContent.charAt(i);
-            i++;
-            setTimeout(type, speed);
+    // Wrap each character in a span with staggered delay
+    let wrapped = '';
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] === ' ') {
+            wrapped += ' ';
         } else {
-            // Restore HTML with spans for highlights
-            heroTitle.innerHTML = originalText;
-            heroTitle.style.borderRight = 'none';
+            wrapped += `<span class="reveal-letter" style="animation-delay: ${i * 0.025}s">${text[i]}</span>`;
         }
     }
     
-    type();
+    heroTitle.innerHTML = wrapped;
+    
+    // After all letters are revealed, restore original HTML with highlights
+    const totalTime = text.length * 25 + 500;
+    setTimeout(() => {
+        heroTitle.innerHTML = originalHTML;
+        heroTitle.style.opacity = '1';
+    }, totalTime);
 }
 
-// Run typewriter on page load
-window.addEventListener('load', () => {
-    setTimeout(typeWriter, 30);
-});
+// Run immediately on DOM ready — no delay
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', glowReveal);
+} else {
+    glowReveal();
+}
 
 // ==================== COUNTER ANIMATION ====================
 const statsObserver = new IntersectionObserver((entries) => {
