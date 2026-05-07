@@ -138,7 +138,7 @@ function typeWriter() {
     heroTitle.textContent = '';
     
     let i = 0;
-    const speed = 200;
+    const speed = 700;
     
     function type() {
         if (i < textContent.length) {
@@ -157,7 +157,7 @@ function typeWriter() {
 
 // Run typewriter on page load
 window.addEventListener('load', () => {
-    setTimeout(typeWriter, 100);
+    setTimeout(typeWriter, 30);
 });
 
 // ==================== COUNTER ANIMATION ====================
