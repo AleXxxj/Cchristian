@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="55%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0d2d3d"/>
+      <stop offset="60%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#070d13"/>
+    </radialGradient>
+
+    <!-- Grid line style -->
+    <style>
+      .grid-line { stroke: #1a5f7a; stroke-width: 0.5; fill: none; opacity: 0.25; }
+      .arc-major { stroke: #2a7a9c; stroke-width: 0.8; fill: none; opacity: 0.2; }
+      .route-glow { filter: url(#glowFilter); }
+      .dot-city { fill: #f39c12; }
+      .dot-minor { fill: #2a7a9c; }
+    </style>
+
+    <!-- Glow filter for routes -->
+    <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow for nodes -->
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle dot pattern -->
+    <pattern id="dotPattern" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="24" cy="24" r="1" fill="#1a5f7a" opacity="0.3"/>
+    </pattern>
+
+    <!-- Dash animation for route -->
+    <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f39c12" stop-opacity="0.2"/>
+      <stop offset="40%" stop-color="#f39c12" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f39c12" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Secondary route gradient -->
+    <linearGradient id="routeGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a7a9c" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#2a7a9c" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2a7a9c" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Continent fill -->
+    <linearGradient id="continentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a5f7a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#134b61" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <rect width="1920" height="1080" fill="url(#dotPattern)"/>
+
+  <!-- ===== LATITUDE GRID LINES ===== -->
+  <g class="grid-line">
+    <!-- Horizontal latitude lines -->
+    <line x1="0" y1="120" x2="1920" y2="120"/>
+    <line x1="0" y1="240" x2="1920" y2="240"/>
+    <line x1="0" y1="360" x2="1920" y2="360"/>
+    <line x1="0" y1="480" x2="1920" y2="480"/>
+    <line x1="0" y1="600" x2="1920" y2="600"/>
+    <line x1="0" y1="720" x2="1920" y2="720"/>
+    <line x1="0" y1="840" x2="1920" y2="840"/>
+    <line x1="0" y1="960" x2="1920" y2="960"/>
+    <!-- Vertical longitude lines -->
+    <line x1="192" y1="0" x2="192" y2="1080"/>
+    <line x1="384" y1="0" x2="384" y2="1080"/>
+    <line x1="576" y1="0" x2="576" y2="1080"/>
+    <line x1="768" y1="0" x2="768" y2="1080"/>
+    <line x1="960" y1="0" x2="960" y2="1080"/>
+    <line x1="1152" y1="0" x2="1152" y2="1080"/>
+    <line x1="1344" y1="0" x2="1344" y2="1080"/>
+    <line x1="1536" y1="0" x2="1536" y2="1080"/>
+    <line x1="1728" y1="0" x2="1728" y2="1080"/>
+  </g>
+
+  <!-- ===== GLOBE ARC OVERLAYS ===== -->
+  <!-- Globe circles (longitude arcs) centered at shipping hub -->
+  <g class="arc-major">
+    <ellipse cx="1040" cy="520" rx="160" ry="320" transform="rotate(-15 1040 520)"/>
+    <ellipse cx="1040" cy="520" rx="300" ry="320" transform="rotate(-15 1040 520)"/>
+    <ellipse cx="1040" cy="520" rx="430" ry="320" transform="rotate(-15 1040 520)"/>
+    <ellipse cx="1040" cy="520" rx="560" ry="320" transform="rotate(-15 1040 520)"/>
+    <ellipse cx="1040" cy="520" rx="680" ry="320" transform="rotate(-15 1040 520)"/>
+    <!-- Equator-style arc -->
+    <ellipse cx="1040" cy="520" rx="750" ry="180"/>
+  </g>
+
+  <!-- ===== SIMPLIFIED CONTINENT OUTLINES ===== -->
+
+  <!-- Africa silhouette (simplified) -->
+  <path d="
+    M 940 420 L 970 400 L 1010 395 L 1045 400 L 1070 415 L 1085 440 L 1090 470
+    L 1095 500 L 1090 535 L 1075 570 L 1060 610 L 1040 650 L 1020 685 L 1010 710
+    L 1015 735 L 1025 750 L 1020 760 L 1005 755 L 995 740 L 985 715 L 970 690
+    L 950 660 L 930 625 L 915 590 L 905 555 L 900 520 L 900 485 L 905 455
+    L 918 433 Z
+  " fill="url(#continentGrad)" stroke="#2a7a9c" stroke-width="1" opacity="0.5"/>
+
+  <!-- Europe silhouette (simplified) -->
+  <path d="
+    M 895 175 L 910 165 L 940 160 L 970 158 L 1000 162 L 1030 160 L 1060 165
+    L 1090 175 L 1105 190 L 1100 205 L 1085 215 L 1090 228 L 1080 240 L 1065 248
+    L 1050 255 L 1035 260 L 1020 268 L 1015 280 L 1005 285 L 990 282 L 975 275
+    L 960 270 L 945 265 L 930 258 L 915 248 L 905 235 L 898 220 L 893 205 Z
+  " fill="url(#continentGrad)" stroke="#2a7a9c" stroke-width="1" opacity="0.45"/>
+
+  <!-- Scandinavia extension -->
+  <path d="
+    M 1010 162 L 1015 148 L 1025 138 L 1040 132 L 1055 135 L 1065 148 L 1060 162 L 1030 162 Z
+  " fill="url(#continentGrad)" stroke="#2a7a9c" stroke-width="1" opacity="0.35"/>
+
+  <!-- ===== MAIN SHIPPING ROUTE: Lagos → Frankfurt ===== -->
+  <!-- Shadow/glow layer -->
+  <path d="M 1005 668 C 990 540 990 420 980 330 C 972 265 985 235 1008 215"
+        fill="none" stroke="#f39c12" stroke-width="6" opacity="0.15" stroke-linecap="round"/>
+  <!-- Animated route line -->
+  <path d="M 1005 668 C 990 540 990 420 980 330 C 972 265 985 235 1008 215"
+        fill="none" stroke="url(#routeGrad)" stroke-width="2.5" stroke-linecap="round"
+        stroke-dasharray="12 6" opacity="0.9" class="route-glow">
+    <animate attributeName="stroke-dashoffset" from="0" to="-180" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- ===== SECONDARY ROUTES ===== -->
+  <!-- Lagos → London -->
+  <path d="M 1005 668 C 980 550 950 440 935 350 C 925 290 930 255 940 230"
+        fill="none" stroke="url(#routeGrad2)" stroke-width="1.5" stroke-linecap="round"
+        stroke-dasharray="8 8" opacity="0.55"/>
+
+  <!-- Lagos → Amsterdam -->
+  <path d="M 1005 668 C 995 560 985 460 978 380 C 972 315 975 272 982 248"
+        fill="none" stroke="url(#routeGrad2)" stroke-width="1.5" stroke-linecap="round"
+        stroke-dasharray="8 8" opacity="0.45"/>
+
+  <!-- ===== CITY NODES ===== -->
+
+  <!-- Lagos, Nigeria — origin point (golden, large) -->
+  <g filter="url(#nodeGlow)" transform="translate(1005, 668)">
+    <circle r="22" fill="#f39c12" opacity="0.12"/>
+    <circle r="12" fill="#f39c12" opacity="0.25"/>
+    <circle r="6" fill="#f39c12" opacity="0.9"/>
+    <circle r="3" fill="#fff" opacity="0.95"/>
+  </g>
+  <!-- Lagos pulse ring -->
+  <circle cx="1005" cy="668" r="18" fill="none" stroke="#f39c12" stroke-width="1.5" opacity="0.5">
+    <animate attributeName="r" from="8" to="28" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.7" to="0" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Frankfurt, Germany — destination (teal, slightly smaller) -->
+  <g filter="url(#nodeGlow)" transform="translate(1008, 215)">
+    <circle r="18" fill="#2a7a9c" opacity="0.15"/>
+    <circle r="10" fill="#2a7a9c" opacity="0.3"/>
+    <circle r="5" fill="#2a7a9c" opacity="0.95"/>
+    <circle r="2.5" fill="#fff" opacity="0.9"/>
+  </g>
+  <!-- Frankfurt pulse -->
+  <circle cx="1008" cy="215" r="14" fill="none" stroke="#2a7a9c" stroke-width="1.5" opacity="0.5">
+    <animate attributeName="r" from="6" to="22" dur="2.8s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.6" to="0" dur="2.8s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- London -->
+  <g transform="translate(940, 232)">
+    <circle r="5" fill="#2a7a9c" opacity="0.8"/>
+    <circle r="2" fill="#fff" opacity="0.7"/>
+  </g>
+  <!-- Amsterdam -->
+  <g transform="translate(980, 248)">
+    <circle r="4" fill="#2a7a9c" opacity="0.7"/>
+    <circle r="1.8" fill="#fff" opacity="0.6"/>
+  </g>
+  <!-- Hamburg -->
+  <g transform="translate(1015, 190)">
+    <circle r="4" fill="#2a7a9c" opacity="0.6"/>
+    <circle r="1.8" fill="#fff" opacity="0.5"/>
+  </g>
+
+  <!-- ===== SCATTER MINOR DOTS (suggest global reach) ===== -->
+  <!-- North America region -->
+  <circle cx="320" cy="280" r="3" class="dot-minor" opacity="0.5"/>
+  <circle cx="370" cy="320" r="2.5" class="dot-minor" opacity="0.4"/>
+  <circle cx="290" cy="340" r="2" class="dot-minor" opacity="0.35"/>
+  <circle cx="420" cy="260" r="2" class="dot-minor" opacity="0.3"/>
+
+  <!-- Caribbean / South America -->
+  <circle cx="450" cy="480" r="2.5" class="dot-minor" opacity="0.4"/>
+  <circle cx="520" cy="560" r="2" class="dot-minor" opacity="0.3"/>
+  <circle cx="480" cy="620" r="2.5" class="dot-minor" opacity="0.35"/>
+
+  <!-- Middle East -->
+  <circle cx="1130" cy="330" r="3" class="dot-minor" opacity="0.55"/>
+  <circle cx="1165" cy="360" r="2.5" class="dot-minor" opacity="0.4"/>
+  <circle cx="1190" cy="310" r="2" class="dot-minor" opacity="0.35"/>
+
+  <!-- East Africa -->
+  <circle cx="1085" cy="580" r="2.5" class="dot-minor" opacity="0.45"/>
+  <circle cx="1070" cy="630" r="2" class="dot-minor" opacity="0.35"/>
+
+  <!-- South Africa -->
+  <circle cx="1010" cy="780" r="3" class="dot-minor" opacity="0.4"/>
+
+  <!-- Asia -->
+  <circle cx="1350" cy="280" r="3" class="dot-minor" opacity="0.5"/>
+  <circle cx="1420" cy="320" r="2.5" class="dot-minor" opacity="0.4"/>
+  <circle cx="1500" cy="350" r="3" class="dot-minor" opacity="0.45"/>
+  <circle cx="1580" cy="290" r="2.5" class="dot-minor" opacity="0.4"/>
+  <circle cx="1620" cy="370" r="2" class="dot-minor" opacity="0.35"/>
+
+  <!-- Southeast Asia / Australia -->
+  <circle cx="1580" cy="500" r="2.5" class="dot-minor" opacity="0.4"/>
+  <circle cx="1650" cy="600" r="2" class="dot-minor" opacity="0.3"/>
+  <circle cx="1720" cy="680" r="2.5" class="dot-minor" opacity="0.3"/>
+
+  <!-- ===== SUBTLE CONNECTORS between minor dots ===== -->
+  <g stroke="#1a5f7a" stroke-width="0.6" opacity="0.15" fill="none">
+    <line x1="320" y1="280" x2="370" y2="320"/>
+    <line x1="370" y1="320" x2="450" y2="480"/>
+    <line x1="1130" y1="330" x2="1008" y2="215"/>
+    <line x1="1350" y1="280" x2="1420" y2="320"/>
+    <line x1="1420" y1="320" x2="1500" y2="350"/>
+    <line x1="1130" y1="330" x2="1350" y2="280"/>
+  </g>
+
+  <!-- ===== LABEL HINTS (city dots label) ===== -->
+  <text x="1017" y="688" font-family="sans-serif" font-size="11" fill="#f39c12" opacity="0.85" letter-spacing="1">LAGOS</text>
+  <text x="1020" y="210" font-family="sans-serif" font-size="11" fill="#7ec8e3" opacity="0.8" letter-spacing="1">FRANKFURT</text>
+
+  <!-- ===== LIGHT VIGNETTE EDGES ===== -->
+  <rect width="1920" height="1080" fill="none"
+        style="box-shadow: inset 0 0 200px rgba(0,0,0,0.8)"/>
+  <!-- Top fade -->
+  <rect x="0" y="0" width="1920" height="200"
+        fill="url(#topFade)"/>
+  <!-- Bottom fade -->
+  <rect x="0" y="800" width="1920" height="280"
+        fill="url(#bottomFade)"/>
+
+  <defs>
+    <linearGradient id="topFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#070d13" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#070d13" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bottomFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#070d13" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#070d13" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+</svg>
